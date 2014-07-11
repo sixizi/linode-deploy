@@ -1,0 +1,12 @@
+daemontools-run
+dnsmasq
+dstat
+fcgiwrap
+grub
+krb5-user
+linux-base
+mtr-tiny
+netfilter-persistent
+nginx
+tcpdump
+vim-tiny
