@@ -1,8 +1,10 @@
 #!/bin/sh
 
-if ! grep -q "/dev/xvda / " /proc/mounts; then
-	echo "Not in VM, exit" && exit
-fi
+export LANGUAGE=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+locale-gen en_US.UTF-8
+dpkg-reconfigure locales
 
 apt-get purge -qqy rpcbind
 sed -i 's,wheezy,jessie,g' /etc/apt/sources.list
